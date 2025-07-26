@@ -15,6 +15,7 @@ def add_bollinger_bands(df: pd.DataFrame, length: int = 20, std: int = 2) -> pd.
     """
     if 'Close' not in df.columns:
         raise ValueError("DataFrame must contain 'Close' column for Bollinger Bands.")
-    
-    bbands = ta.bbands(df['Close'], length=length, std=std)
-    return df.join(bbands)
+    bbands = ta.bbands(df['Close'])
+    df = df.drop(columns=bbands.columns.intersection(df.columns), errors='ignore')
+
+    return df.join(bbands, rsuffix="_bb")

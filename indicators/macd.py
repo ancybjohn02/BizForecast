@@ -15,4 +15,5 @@ def add_macd(df: pd.DataFrame) -> pd.DataFrame:
         raise ValueError("DataFrame must contain 'Close' column for MACD.")
     
     macd = ta.macd(df['Close'])
-    return df.join(macd)
+    return df.join(macd, rsuffix='_macd')
+
