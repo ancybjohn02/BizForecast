@@ -2,6 +2,7 @@ streamlit
 yfinance
 pandas
 matplotlib
-pandas_ta
+numpy==1.26.4
+pandas_ta==0.3.14b
 seaborn
 setuptools
