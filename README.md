@@ -3,7 +3,8 @@
 Motivation : beyond the obvious, companies often overlooked in beginner analyses but vital in understanding where the next wave of innovation may surge.
 
 ## 📁 Folder Structure 
-MVP/
+```
+/
 │
 ├── data/
 │   ├── ASML.csv, BR.csv, DXCM.csv, FICO.csv, FTNT.csv, SPGI.csv
@@ -24,6 +25,7 @@ MVP/
 ├── main.py
 ├── README.md
 └── requirements.txt
+```
 
 * FTNT (Tech / Cybersecurity)
 * ASML (Chip hardware)
@@ -35,14 +37,20 @@ MVP/
 Data Pieline : 
 Note: for now, the data is fetched only once and is not auto-updating
 
+### 🔁 Workflow Diagram
+
+```mermaid
 graph TD
-    A[Yahoo Finance] --> B[Load CSV]
-    B --> C[Clean Missing Values]
-    C --> D[Manual Indicators (RSI, OBV)]
-    C --> E[pandas_ta Indicators (MACD, BB, MA)]
-    D --> F[Signal Generation & Alerts]
-    E --> F
-    F --> G[Interactive Visualization Dashboard]
+    A[Start: Load Stock Data] --> B[Clean Data]
+    B --> C[Calculate RSI & OBV]
+    B --> D[Use pandas_ta for MACD, BB, MA]
+    C --> E[Generate Buy/Sell Signals]
+    D --> E
+    E --> F[Visualize Trends & Signals]
+    F --> G[Analyze Sector-wise Insights]
+```
+
+
 
 | Indicator        | Source      | Waht it does                                          |
 | ---------------- | ----------- | ----------------------------------------------- |
