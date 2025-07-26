@@ -114,3 +114,5 @@ Insights
 | **FICO**    | Consistent bullish EMA crossover + RSI staying in 50–70 zone.       |
 | **SPGI**    | Long consolidation with BB squeeze → volatility incoming.           |
 | **BR/MKTX** | Lower OBV trend diverging from price — weak rally likely.           |
+
+Link to dashboard : https://bizforecast-dashboard.streamlit.app/
